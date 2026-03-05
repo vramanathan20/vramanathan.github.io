@@ -1,8 +1,23 @@
----
-layout: default
-title: Home
----
-# Welcome! I'm [Your Name]
-I am a student at William & Mary specializing in Education and GIS. I am a highly **conscientious** and **agreeable** individual, which makes me a dedicated educator and a collaborative peer.
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valli Ramanathan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-[View my Resume]({{ site.baseurl }}/resume) | [Read my Blog]({{ site.baseurl }}/blog)
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="resume.html">Resume</a>
+<a href="blog.html">Blog</a>
+</nav>
+
+<h1>Valli Ramanathan</h1>
+
+<p>Hello! I am an Economics and Data Science student at William & Mary interested in venture capital, consulting, and technology.</p>
+
+<p>Welcome to my personal website where you can learn about my experience and read my blog.</p>
+
+</body>
+</html>
