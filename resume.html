@@ -49,23 +49,44 @@ nav a:hover {
 }
 
 /* HEADINGS */
-h1, h2 {
-    color: #cc0066;
-    margin-bottom: 10px;
-}
-
 h1 {
     text-align: center;
     font-size: 36px;
+    color: #cc0066;
+    margin-bottom: 20px;
 }
 
-h2 {
-    border-bottom: 2px solid #ff66b2;
-    padding-bottom: 5px;
-    margin-top: 40px;
+/* COLLAPSIBLE BUTTONS */
+.collapsible {
+    background-color: #ff66b2;
+    color: white;
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
-/* EXPERIENCE / INTERNSHIP LIST */
+.collapsible:hover {
+    background-color: #ff4d99;
+}
+
+/* COLLAPSIBLE CONTENT */
+.content {
+    padding: 0 20px;
+    display: none;
+    overflow: hidden;
+    background-color: #fff0f5; /* light pink */
+    border-left: 3px solid #ff66b2;
+    margin-bottom: 20px;
+}
+
+/* EXPERIENCE / INTERNSHIP ITEMS */
 .section-item {
     margin-bottom: 20px;
 }
@@ -73,6 +94,7 @@ h2 {
 .section-item h3 {
     margin: 0;
     font-size: 20px;
+    color: #cc0066;
 }
 
 .section-item h4 {
@@ -82,8 +104,8 @@ h2 {
     color: #555;
 }
 
-.section-item p {
-    margin: 5px 0;
+.section-item p, .section-item ul {
+    margin: 5px 0 15px 20px;
 }
 
 /* RESPONSIVE DESIGN */
@@ -115,122 +137,148 @@ h2 {
 
 <h1>Valli Ramanathan</h1>
 
-<h2>Experience & Positions</h2>
+<!-- EXPERIENCE & POSITIONS -->
+<button class="collapsible">Experience & Positions</button>
+<div class="content">
+  <div class="section-item">
+    <h3>Research Assistant</h3>
+    <h4>William & Mary Global Research Institute · Sep 2025 - Present · Hybrid</h4>
+    <p>Working in the Ignite Global Health Lab and Schroeder Center for Health Policy to support research in global public health as a Research Fellow.</p>
+    <ul>
+      <li>Cleaning, handling, and processing multidimensional population health data in R/Python</li>
+      <li>Feature engineering and geospatial indicators in ArcGIS Pro</li>
+      <li>Data visualization, plotting, and mapping</li>
+      <li>Supporting statistical and machine learning models in R/Python</li>
+      <li>Cost-effectiveness and cost-benefit analyses</li>
+    </ul>
+  </div>
 
-<div class="section-item">
-<h3>Research Assistant</h3>
-<h4>William & Mary Global Research Institute · Sep 2025 - Present · Hybrid</h4>
-<p>Working in the Ignite Global Health Lab and Schroeder Center for Health Policy to support research in global public health as a Research Fellow.</p>
-<ul>
-<li>Cleaning, handling, and processing multidimensional population health data in R/Python</li>
-<li>Feature engineering and geospatial indicators in ArcGIS Pro</li>
-<li>Data visualization, plotting, and mapping</li>
-<li>Supporting statistical and machine learning models in R/Python</li>
-<li>Cost-effectiveness and cost-benefit analyses</li>
-</ul>
+  <div class="section-item">
+    <h3>Undergraduate Advisory Group for Arts and Sciences</h3>
+    <h4>William & Mary · Sep 2025 - Present</h4>
+    <p>Undersecretary for the Department of University Policy and Student Rights: Managing and advocating for university policy and student advocacy.</p>
+  </div>
+
+  <div class="section-item">
+    <h3>Swimming Instructor</h3>
+    <h4>William & Mary · Apr 2025 - Present</h4>
+    <ul>
+      <li>Developed and implemented customized swimming lessons for all ages</li>
+      <li>Organized lesson schedules and monitored progress</li>
+    </ul>
+  </div>
+
+  <div class="section-item">
+    <h3>Residential Assistant</h3>
+    <h4>William & Mary · Dec 2023 - Jun 2025</h4>
+    <p>Created an inclusive environment in residence halls; organized community-building programs; enforced university policies; responded to emergencies.</p>
+  </div>
+
+  <div class="section-item">
+    <h3>Undersecretary - GA</h3>
+    <h4>WMHSMUN · Feb 2023 - Mar 2025</h4>
+    <p>Led General Assembly committees for over 400 delegates during WMHSMUN, providing guidance and oversight.</p>
+  </div>
 </div>
 
-<div class="section-item">
-<h3>Undergraduate Advisory Group for Arts and Sciences</h3>
-<h4>William & Mary · Sep 2025 - Present</h4>
-<p>Undersecretary for the Department of University Policy and Student Rights: Managing and advocating for university policy and student advocacy.</p>
+<!-- INTERNSHIPS & WORK EXPERIENCE -->
+<button class="collapsible">Internships & Work Experience</button>
+<div class="content">
+  <div class="section-item">
+    <h3>Equity Research Intern</h3>
+    <h4>Batlivala & Karani Group · May 2025 - Aug 2025</h4>
+    <ul>
+      <li>Analyzed financial statements and market trends for the automation industry</li>
+      <li>Developed financial models, revenue forecasts, and valuation scenarios</li>
+      <li>Authored investment reports and sector analyses</li>
+    </ul>
+  </div>
+
+  <div class="section-item">
+    <h3>Fund Analyst</h3>
+    <h4>Endurion Capital · Feb 2025 - Jun 2025</h4>
+    <p>Conducted market research and financial analysis on MSPs and potential acquisition targets in private equity.</p>
+  </div>
+
+  <div class="section-item">
+    <h3>Intern</h3>
+    <h4>Black Pearl Global Investments · Sep 2024 - Dec 2024</h4>
+    <ul>
+      <li>Evaluated startups and performed due diligence</li>
+      <li>Reviewed financial statements and assisted with growth strategies</li>
+      <li>Led team weekly meetings and streamlined opportunity selection</li>
+    </ul>
+  </div>
+
+  <div class="section-item">
+    <h3>Legislative Assistant</h3>
+    <h4>Virginia State Senate · May 2024 - Aug 2024</h4>
+    <ul>
+      <li>Tracked legislation, attended hearings, and drafted memos</li>
+      <li>Drafted social media content and addressed constituent concerns</li>
+      <li>Documented meetings and performed data-entry tasks</li>
+    </ul>
+  </div>
+
+  <div class="section-item">
+    <h3>Consulting Intern</h3>
+    <h4>Get In The Game · Aug 2023 - May 2024</h4>
+    <ul>
+      <li>Community outreach, workshop facilitation, and event coordination</li>
+      <li>Research and analysis of student-athlete programs</li>
+      <li>Content creation and partnership building</li>
+    </ul>
+  </div>
 </div>
 
-<div class="section-item">
-<h3>Swimming Instructor</h3>
-<h4>William & Mary · Apr 2025 - Present</h4>
-<ul>
-<li>Developed and implemented customized swimming lessons for all ages</li>
-<li>Organized lesson schedules and monitored progress</li>
-</ul>
+<!-- VOLUNTEER & LEADERSHIP -->
+<button class="collapsible">Volunteer & Leadership</button>
+<div class="content">
+  <div class="section-item">
+    <h3>Virginia Director</h3>
+    <h4>Shooting Stars Foundation · Aug 2019 - Sep 2022</h4>
+    <ul>
+      <li>Managed team of 15-20 people and organized 4-5 educational camps per year</li>
+      <li>Responsible for marketing, curriculum, and program planning</li>
+    </ul>
+  </div>
+
+  <div class="section-item">
+    <h3>State President / IDEA Director</h3>
+    <h4>Voters of Tomorrow · Nov 2021 - Apr 2023</h4>
+    <p>Oversaw inclusivity and diversity efforts, conducted surveys, and coordinated recruitment for team positions.</p>
+  </div>
 </div>
 
-<div class="section-item">
-<h3>Residential Assistant</h3>
-<h4>William & Mary · Dec 2023 - Jun 2025</h4>
-<p>Created an inclusive environment in residence halls; organized community-building programs; enforced university policies; responded to emergencies.</p>
+<!-- SKILLS -->
+<button class="collapsible">Skills</button>
+<div class="content">
+  <ul>
+    <li>Leadership</li>
+    <li>Public Speaking</li>
+    <li>R / Python / ArcGIS</li>
+    <li>Data Analysis</li>
+    <li>Financial Modeling</li>
+  </ul>
 </div>
 
-<div class="section-item">
-<h3>Undersecretary - GA</h3>
-<h4>WMHSMUN · Feb 2023 - Mar 2025</h4>
-<p>Led General Assembly committees for over 400 delegates during WMHSMUN, providing guidance and oversight.</p>
-</div>
+</div> <!-- End container -->
 
-<h2>Internships & Work Experience</h2>
+<!-- JAVASCRIPT FOR COLLAPSIBLE -->
+<script>
+var coll = document.getElementsByClassName("collapsible");
+for (var i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
-<div class="section-item">
-<h3>Equity Research Intern</h3>
-<h4>Batlivala & Karani Group · May 2025 - Aug 2025</h4>
-<ul>
-<li>Analyzed financial statements and market trends for the automation industry</li>
-<li>Developed financial models, revenue forecasts, and valuation scenarios</li>
-<li>Authored investment reports and sector analyses</li>
-</ul>
-</div>
-
-<div class="section-item">
-<h3>Fund Analyst</h3>
-<h4>Endurion Capital · Feb 2025 - Jun 2025</h4>
-<p>Conducted market research and financial analysis on MSPs and potential acquisition targets in private equity.</p>
-</div>
-
-<div class="section-item">
-<h3>Intern</h3>
-<h4>Black Pearl Global Investments · Sep 2024 - Dec 2024</h4>
-<ul>
-<li>Evaluated startups and performed due diligence</li>
-<li>Reviewed financial statements and assisted with growth strategies</li>
-<li>Led team weekly meetings and streamlined opportunity selection</li>
-</ul>
-</div>
-
-<div class="section-item">
-<h3>Legislative Assistant</h3>
-<h4>Virginia State Senate · May 2024 - Aug 2024</h4>
-<ul>
-<li>Tracked legislation, attended hearings, and drafted memos</li>
-<li>Drafted social media content and addressed constituent concerns</li>
-<li>Documented meetings and performed data-entry tasks</li>
-</ul>
-</div>
-
-<div class="section-item">
-<h3>Consulting Intern</h3>
-<h4>Get In The Game · Aug 2023 - May 2024</h4>
-<ul>
-<li>Community outreach, workshop facilitation, and event coordination</li>
-<li>Research and analysis of student-athlete programs</li>
-<li>Content creation and partnership building</li>
-</ul>
-</div>
-
-<h2>Volunteer & Leadership</h2>
-
-<div class="section-item">
-<h3>Virginia Director</h3>
-<h4>Shooting Stars Foundation · Aug 2019 - Sep 2022</h4>
-<ul>
-<li>Managed team of 15-20 people and organized 4-5 educational camps per year</li>
-<li>Responsible for marketing, curriculum, and program planning</li>
-</ul>
-</div>
-
-<div class="section-item">
-<h3>State President / IDEA Director</h3>
-<h4>Voters of Tomorrow · Nov 2021 - Apr 2023</h4>
-<p>Oversaw inclusivity and diversity efforts, conducted surveys, and coordinated recruitment for team positions.</p>
-</div>
-
-<h2>Skills</h2>
-<ul>
-<li>Leadership</li>
-<li>Public Speaking</li>
-<li>R / Python / ArcGIS</li>
-<li>Data Analysis</li>
-<li>Financial Modeling</li>
-</ul>
-
-</div>
 </body>
 </html>
