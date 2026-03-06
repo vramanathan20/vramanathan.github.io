@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Valli Ramanathan - Resume</title>
-
 <style>
 /* GENERAL STYLES */
 body {
@@ -45,7 +43,7 @@ nav a:hover {
     margin: auto;
     background-color: white;
     padding: 40px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
 }
 
 /* HEADINGS */
@@ -53,7 +51,7 @@ h1 {
     text-align: center;
     font-size: 36px;
     color: #cc0066;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 h2 {
@@ -63,19 +61,19 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* SCROLL FOLD SECTIONS (SLIDE + FADE) */
-.scroll-section .content {
-    max-height: 0;           /* collapsed */
-    opacity: 0;              /* invisible */
+/* SECTION CONTENT (collapsed initially) */
+.section-content {
+    max-height: 0;
+    opacity: 0;
     overflow: hidden;
-    transform: translateY(20px); /* start slightly below */
+    transform: translateY(20px);
     transition: max-height 0.8s ease, opacity 0.8s ease, transform 0.8s ease;
 }
 
-.scroll-section.show .content {
-    max-height: 2000px;      /* enough for full content */
-    opacity: 1;              /* visible */
-    transform: translateY(0); /* slide up into place */
+.section-content.show {
+    max-height: 2000px;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* EXPERIENCE / INTERNSHIP ITEMS */
@@ -113,7 +111,6 @@ h2 {
 }
 </style>
 </head>
-
 <body>
 
 <!-- NAVIGATION -->
@@ -123,16 +120,12 @@ h2 {
 <a href="blog.html">Blog</a>
 </nav>
 
-<!-- MAIN CONTAINER -->
 <div class="container">
-
 <h1>Valli Ramanathan</h1>
 
 <!-- EXPERIENCE & POSITIONS -->
-<div class="scroll-section">
-<h2>Experience & Positions</h2>
-<div class="content">
-
+<h2 class="section-heading">Experience & Positions</h2>
+<div class="section-content">
   <div class="section-item">
     <h3>Research Assistant</h3>
     <h4>William & Mary Global Research Institute · Sep 2025 - Present · Hybrid</h4>
@@ -172,15 +165,11 @@ h2 {
     <h4>WMHSMUN · Feb 2023 - Mar 2025</h4>
     <p>Led General Assembly committees for over 400 delegates during WMHSMUN, providing guidance and oversight.</p>
   </div>
-
-</div>
 </div>
 
 <!-- INTERNSHIPS & WORK EXPERIENCE -->
-<div class="scroll-section">
-<h2>Internships & Work Experience</h2>
-<div class="content">
-
+<h2 class="section-heading">Internships & Work Experience</h2>
+<div class="section-content">
   <div class="section-item">
     <h3>Equity Research Intern</h3>
     <h4>Batlivala & Karani Group · May 2025 - Aug 2025</h4>
@@ -226,15 +215,11 @@ h2 {
       <li>Content creation and partnership building</li>
     </ul>
   </div>
-
-</div>
 </div>
 
 <!-- VOLUNTEER & LEADERSHIP -->
-<div class="scroll-section">
-<h2>Volunteer & Leadership</h2>
-<div class="content">
-
+<h2 class="section-heading">Volunteer & Leadership</h2>
+<div class="section-content">
   <div class="section-item">
     <h3>Virginia Director</h3>
     <h4>Shooting Stars Foundation · Aug 2019 - Sep 2022</h4>
@@ -249,14 +234,11 @@ h2 {
     <h4>Voters of Tomorrow · Nov 2021 - Apr 2023</h4>
     <p>Oversaw inclusivity and diversity efforts, conducted surveys, and coordinated recruitment for team positions.</p>
   </div>
-
-</div>
 </div>
 
 <!-- SKILLS -->
-<div class="scroll-section">
-<h2>Skills</h2>
-<div class="content">
+<h2 class="section-heading">Skills</h2>
+<div class="section-content">
   <ul>
     <li>Leadership</li>
     <li>Public Speaking</li>
@@ -265,24 +247,23 @@ h2 {
     <li>Financial Modeling</li>
   </ul>
 </div>
-</div>
 
 </div> <!-- End container -->
 
-<!-- JAVASCRIPT FOR SCROLL FOLD ANIMATION -->
 <script>
-const sections = document.querySelectorAll('.scroll-section');
+// Observe each section heading
+const headings = document.querySelectorAll('.section-heading');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show'); // trigger fold animation
-    }
-  });
-}, { threshold: 0.1 });
-
-sections.forEach(section => {
-  observer.observe(section);
+headings.forEach((heading, i) => {
+    const content = heading.nextElementSibling; // the section content after the heading
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                content.classList.add('show'); // unfold this section
+            }
+        });
+    }, { threshold: 0.1 });
+    observer.observe(heading);
 });
 </script>
 
