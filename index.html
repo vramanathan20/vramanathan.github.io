@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Valli Ramanathan</title>
-
 <style>
-
-/* Page style */
-
+/* PAGE STYLE */
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    background-color:#ffe6f0;
+    background-color:#ffe6f5; /* lighter pink background */
+    color:#333;
 }
 
-/* Navigation bar */
-
+/* NAVIGATION BAR */
 nav{
-    background-color:#ff66b2;
+    background-color:#ff99cc; /* lighter pink nav */
     padding:15px;
     text-align:center;
 }
@@ -36,8 +32,7 @@ nav a:hover{
     text-decoration:underline;
 }
 
-/* Main section */
-
+/* MAIN HERO SECTION */
 .hero{
     text-align:center;
     padding:60px 20px;
@@ -45,86 +40,85 @@ nav a:hover{
 
 .hero h1{
     font-size:42px;
-    color:#cc0066;
+    color:#cc3399; /* slightly darker pink for headings */
 }
 
 .hero p{
     font-size:18px;
-    max-width:600px;
+    max-width:700px;
     margin:auto;
+    line-height:1.6;
 }
 
-/* Image styling */
-
+/* IMAGE STYLING */
 .profile-image{
     width:220px;
+    height:220px;
     border-radius:50%;
+    border:3px solid #ff99cc; /* matches nav */
     margin-top:20px;
+    object-fit:cover;
 }
 
-/* Button */
-
+/* BUTTON */
 .button{
     display:inline-block;
     margin-top:25px;
     padding:12px 25px;
-    background-color:#ff66b2;
+    background-color:#ff99cc;
     color:white;
     text-decoration:none;
     border-radius:25px;
+    font-weight:bold;
 }
 
-/* Responsive design */
-
+/* RESPONSIVE DESIGN */
 @media (max-width:600px){
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
 
-nav a{
-    display:block;
-    margin:10px 0;
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .profile-image{
+        width:180px;
+        height:180px;
+    }
 }
-
-.hero h1{
-    font-size:32px;
-}
-
-}
-
 </style>
 </head>
 
-
 <body>
 
-<!-- Navigation -->
-
+<!-- NAVIGATION -->
 <nav>
-<a href="index.html">Home</a>
-<a href="resume.html">Resume</a>
-<a href="blog.html">Blog</a>
+  <a href="index.html">Home</a>
+  <a href="resume.html">Resume</a>
+  <a href="blog.html">Blog</a>
 </nav>
 
-
-<!-- Home content -->
-
+<!-- HOME CONTENT -->
 <div class="hero">
+  <h1>Hi, I'm Valli</h1>
 
-<h1>Hi, I'm Valli</h1>
+  <!-- PROFILE IMAGE -->
+  <img src="images/profile.jpg" class="profile-image" alt="Valli Ramanathan">
 
-<p>
-Economics and Data Science student at William & Mary interested in
-venture capital, consulting, and technology.
-</p>
+  <!-- FULL BIO -->
+  <p>
+    I am a current senior pursuing economics at William & Mary. Through my internships with firms like BlackPearl Global Investments and Evolved Global, I developed hands-on experience in venture capital, conducting due diligence, analyzing financial statements, and contributing to startup growth strategies. This experience taught me the importance of thorough research and analytical rigor in evaluating investments and driving business decisions. On campus, I’m deeply involved in leadership roles as a Residential Assistant, Presidential Aide, and Undersecretary-General for our High School Model UN Conference, where I advocate for inclusivity and community building. I foster a welcoming environment in each role that supports diversity and inspires meaningful connections. My experience in student leadership has honed my communication and organizational skills, enabling me to manage projects effectively and lead teams toward a shared goal. I'm passionate about using my analytical and project management skills in consulting, investment banking, and finance/economics. I’m currently exploring consulting and capital markets opportunities and am particularly interested in internships that will allow me to be in a client-centered environment.
+  </p>
 
-<!-- Insert image here -->
-
-<img src="profile.jpg" class="profile-image">
-
-<br>
-
-<a href="resume.html" class="button">View My Resume</a>
-
+  <!-- BUTTON TO RESUME -->
+  <a href="resume.html" class="button">View My Resume</a>
 </div>
-
 
 </body>
 </html>
