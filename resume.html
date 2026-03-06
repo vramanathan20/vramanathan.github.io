@@ -56,34 +56,24 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* COLLAPSIBLE BUTTONS */
-.collapsible {
-    background-color: #ff66b2;
-    color: white;
-    cursor: pointer;
-    padding: 15px 20px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 22px;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 20px;
+h2 {
+    color: #cc0066;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff66b2;
+    padding-bottom: 5px;
 }
 
-.collapsible:hover {
-    background-color: #ff4d99;
-}
-
-/* COLLAPSIBLE CONTENT */
-.content {
-    padding: 0 20px;
-    display: none;
+/* SCROLL FOLD SECTIONS */
+.scroll-section .content {
+    max-height: 0;
+    opacity: 0;
     overflow: hidden;
-    background-color: #fff0f5; /* light pink */
-    border-left: 3px solid #ff66b2;
-    margin-bottom: 20px;
+    transition: max-height 0.8s ease, opacity 0.8s ease;
+}
+
+.scroll-section.show .content {
+    max-height: 2000px; /* enough to fit content */
+    opacity: 1;
 }
 
 /* EXPERIENCE / INTERNSHIP ITEMS */
@@ -120,7 +110,6 @@ h1 {
     }
 }
 </style>
-
 </head>
 
 <body>
@@ -138,8 +127,10 @@ h1 {
 <h1>Valli Ramanathan</h1>
 
 <!-- EXPERIENCE & POSITIONS -->
-<button class="collapsible">Experience & Positions</button>
+<div class="scroll-section">
+<h2>Experience & Positions</h2>
 <div class="content">
+
   <div class="section-item">
     <h3>Research Assistant</h3>
     <h4>William & Mary Global Research Institute · Sep 2025 - Present · Hybrid</h4>
@@ -179,11 +170,15 @@ h1 {
     <h4>WMHSMUN · Feb 2023 - Mar 2025</h4>
     <p>Led General Assembly committees for over 400 delegates during WMHSMUN, providing guidance and oversight.</p>
   </div>
+
+</div>
 </div>
 
 <!-- INTERNSHIPS & WORK EXPERIENCE -->
-<button class="collapsible">Internships & Work Experience</button>
+<div class="scroll-section">
+<h2>Internships & Work Experience</h2>
 <div class="content">
+
   <div class="section-item">
     <h3>Equity Research Intern</h3>
     <h4>Batlivala & Karani Group · May 2025 - Aug 2025</h4>
@@ -229,11 +224,15 @@ h1 {
       <li>Content creation and partnership building</li>
     </ul>
   </div>
+
+</div>
 </div>
 
 <!-- VOLUNTEER & LEADERSHIP -->
-<button class="collapsible">Volunteer & Leadership</button>
+<div class="scroll-section">
+<h2>Volunteer & Leadership</h2>
 <div class="content">
+
   <div class="section-item">
     <h3>Virginia Director</h3>
     <h4>Shooting Stars Foundation · Aug 2019 - Sep 2022</h4>
@@ -248,10 +247,13 @@ h1 {
     <h4>Voters of Tomorrow · Nov 2021 - Apr 2023</h4>
     <p>Oversaw inclusivity and diversity efforts, conducted surveys, and coordinated recruitment for team positions.</p>
   </div>
+
+</div>
 </div>
 
 <!-- SKILLS -->
-<button class="collapsible">Skills</button>
+<div class="scroll-section">
+<h2>Skills</h2>
 <div class="content">
   <ul>
     <li>Leadership</li>
@@ -261,23 +263,25 @@ h1 {
     <li>Financial Modeling</li>
   </ul>
 </div>
+</div>
 
 </div> <!-- End container -->
 
-<!-- JAVASCRIPT FOR COLLAPSIBLE -->
+<!-- JAVASCRIPT FOR SCROLL REVEAL -->
 <script>
-var coll = document.getElementsByClassName("collapsible");
-for (var i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
+const sections = document.querySelectorAll('.scroll-section');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
     }
   });
-}
+}, { threshold: 0.1 });
+
+sections.forEach(section => {
+  observer.observe(section);
+});
 </script>
 
 </body>
