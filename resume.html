@@ -63,17 +63,19 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* SCROLL FOLD SECTIONS */
+/* SCROLL FOLD SECTIONS (SLIDE + FADE) */
 .scroll-section .content {
-    max-height: 0;
-    opacity: 0;
+    max-height: 0;           /* collapsed */
+    opacity: 0;              /* invisible */
     overflow: hidden;
-    transition: max-height 0.8s ease, opacity 0.8s ease;
+    transform: translateY(20px); /* start slightly below */
+    transition: max-height 0.8s ease, opacity 0.8s ease, transform 0.8s ease;
 }
 
 .scroll-section.show .content {
-    max-height: 2000px; /* enough to fit content */
-    opacity: 1;
+    max-height: 2000px;      /* enough for full content */
+    opacity: 1;              /* visible */
+    transform: translateY(0); /* slide up into place */
 }
 
 /* EXPERIENCE / INTERNSHIP ITEMS */
@@ -267,14 +269,14 @@ h2 {
 
 </div> <!-- End container -->
 
-<!-- JAVASCRIPT FOR SCROLL REVEAL -->
+<!-- JAVASCRIPT FOR SCROLL FOLD ANIMATION -->
 <script>
 const sections = document.querySelectorAll('.scroll-section');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
-      entry.target.classList.add('show');
+      entry.target.classList.add('show'); // trigger fold animation
     }
   });
 }, { threshold: 0.1 });
