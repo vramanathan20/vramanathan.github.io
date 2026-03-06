@@ -1,129 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Valli Ramanathan</title>
+
 <style>
+
 /* PAGE STYLE */
-body {
-    margin: 0;
+
+body{
+    margin:0;
     font-family: Arial, sans-serif;
-    background-color: #ffe6f5; /* lighter pink background */
-    color: #333;
+    background-color:#fff0f6;
+    color:#333;
 }
 
-/* NAVIGATION */
-nav {
-    background-color: #ff99cc; /* lighter pink nav */
-    padding: 15px;
-    text-align: center;
+/* NAVIGATION BAR */
+
+nav{
+    background-color:#ffb6d9;
+    padding:15px;
+    text-align:center;
 }
 
-nav a {
-    color: white;
-    margin: 0 20px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
+nav a{
+    color:white;
+    margin:0 20px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a:hover{
+    text-decoration:underline;
 }
 
 /* HERO SECTION */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; /* responsive wrap */
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    max-width:1100px;
+    margin:auto;
+    padding:70px 20px;
+    gap:40px;
 }
 
-/* BIO TEXT */
-.bio {
-    flex: 1;
-    min-width: 280px;
-    margin-right: 40px;
+/* BIO SECTION */
+
+.bio{
+    flex:1;
 }
 
-.bio h1 {
-    font-size: 42px;
-    color: #cc3399;
-    margin-bottom: 20px;
+.bio h1{
+    font-size:42px;
+    color:#cc3385;
+    margin-bottom:20px;
 }
 
-.bio p {
-    font-size: 18px;
-    line-height: 1.6;
+.bio p{
+    font-size:18px;
+    line-height:1.6;
 }
 
 /* PROFILE IMAGE */
-.profile-image {
-    flex: 0 0 220px;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    border: 3px solid #ff99cc;
-    object-fit: cover;
+
+.profile-image{
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #ffb6d9;
 }
 
 /* BUTTON */
-.button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
-    background-color: #ff99cc;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
+
+.button{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background-color:#ff99cc;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+.button:hover{
+    background-color:#ff80bf;
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 800px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .bio {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
+@media (max-width:800px){
 
-    .profile-image {
-        width: 180px;
-        height: 180px;
-    }
+.hero{
+    flex-direction:column;
+    text-align:center;
 }
+
+.profile-image{
+    width:200px;
+    height:200px;
+}
+
+nav a{
+    display:block;
+    margin:10px 0;
+}
+
+}
+
 </style>
+
 </head>
+
 <body>
 
 <!-- NAVIGATION -->
+
 <nav>
-  <a href="index.html">Home</a>
-  <a href="resume.html">Resume</a>
-  <a href="blog.html">Blog</a>
+<a href="index.html">Home</a>
+<a href="resume.html">Resume</a>
+<a href="blog.html">Blog</a>
 </nav>
 
-<!-- HERO SECTION -->
-<div class="hero">
-  <!-- BIO -->
-  <div class="bio">
-    <h1>Hi, I'm Valli</h1>
-    <p>
-      I am a current senior pursuing economics at William and Mary. Through my internships with firms like BlackPearl Global Investments and Evolved Global, I developed hands-on experience in venture capital, conducting due diligence, analyzing financial statements, and contributing to startup growth strategies. This experience taught me the importance of thorough research and analytical rigor in evaluating investments and driving business decisions. On campus, I’m deeply involved in leadership roles as a Residential Assistant, Presidential Aide, and Undersecretary-General for our High School Model UN Conference, where I advocate for inclusivity and community building. I foster a welcoming environment in each role that supports diversity and inspires meaningful connections. My experience in student leadership has honed my communication and organizational skills, enabling me to manage projects effectively and lead teams toward a shared goal. I'm passionate about using my analytical and project management skills in consulting, investment banking, and finance/economics. I’m currently exploring consulting and capital markets opportunities and am particularly interested in internships that will allow me to be in a client-centered environment.
-    </p>
-    <a href="resume.html" class="button">View My Resume</a>
-  </div>
 
-  <!-- PROFILE IMAGE -->
-  <img src="download.png" alt="Valli Ramanathan" class="profile-image">
+<!-- MAIN SECTION -->
+
+<div class="hero">
+
+<!-- BIO -->
+
+<div class="bio">
+
+<h1>Hi, I'm Valli</h1>
+
+<p>
+I am a current senior pursuing economics at William & Mary. Through my internships with firms like BlackPearl Global Investments and Evolved Global, I developed hands-on experience in venture capital, conducting due diligence, analyzing financial statements, and contributing to startup growth strategies. This experience taught me the importance of thorough research and analytical rigor in evaluating investments and driving business decisions.
+</p>
+
+<p>
+On campus, I’m deeply involved in leadership roles as a Residential Assistant, Presidential Aide, and Undersecretary-General for the William & Mary High School Model UN Conference, where I advocate for inclusivity and community building. I foster a welcoming environment in each role that supports diversity and inspires meaningful connections.
+</p>
+
+<p>
+My experience in student leadership has honed my communication and organizational skills, enabling me to manage projects effectively and lead teams toward a shared goal.
+</p>
+
+<p>
+I'm passionate about using my analytical and project management skills in consulting, investment banking, and finance/economics. I’m currently exploring consulting and capital markets opportunities and am particularly interested in internships that will allow me to be in a client-centered environment.
+</p>
+
+<a href="resume.html" class="button">View My Resume</a>
+
+</div>
+
+
+<!-- PROFILE IMAGE -->
+
+<img src="download.png" alt="Valli Ramanathan" class="profile-image">
+
 </div>
 
 </body>
