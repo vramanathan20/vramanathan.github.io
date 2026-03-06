@@ -3,21 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valli Ramanathan - Blog</title>
-
+<title>Valli Ramanathan</title>
 <style>
-/* GENERAL STYLES */
+/* PAGE STYLE */
 body {
-    font-family: 'Times New Roman', Times, serif;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
     background-color: #ffe6f5; /* lighter pink background */
     color: #333;
-}
-
-a {
-    text-decoration: none;
-    color: #ff66b2;
 }
 
 /* NAVIGATION */
@@ -30,121 +23,107 @@ nav {
 nav a {
     color: white;
     margin: 0 20px;
-    font-weight: bold;
+    text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* CONTAINER */
-.container {
-    max-width: 900px;
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* responsive wrap */
+    padding: 60px 20px;
+    max-width: 1000px;
     margin: auto;
-    background-color: white;
-    padding: 40px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-    text-align: center;
 }
 
-/* HEADINGS */
-h1 {
-    font-size: 36px;
+/* BIO TEXT */
+.bio {
+    flex: 1;
+    min-width: 280px;
+    margin-right: 40px;
+}
+
+.bio h1 {
+    font-size: 42px;
     color: #cc3399;
     margin-bottom: 20px;
 }
 
+.bio p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
 /* PROFILE IMAGE */
 .profile-image {
-    width: 150px;
-    height: 150px;
+    flex: 0 0 220px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     border: 3px solid #ff99cc;
     object-fit: cover;
-    margin-bottom: 30px;
 }
 
-/* BLOG POST STYLING */
-.blog-post {
-    background-color: #ffe6f0;
-    border: 2px solid #ff66b2;
-    padding: 20px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: left;
-}
-
-.blog-post:hover {
-    transform: scale(1.02);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.blog-post h2 {
-    margin: 0 0 10px 0;
-    color: #cc0066;
-    font-size: 24px;
-}
-
-.blog-post p {
-    margin: 5px 0;
-}
-
-.blog-post a {
-    color: #ff66b2;
+/* BUTTON */
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: #ff99cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
     font-weight: bold;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
+/* RESPONSIVE DESIGN */
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
     }
 
-    nav a {
-        display: block;
-        margin: 10px 0;
+    .bio {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 
     .profile-image {
-        width: 120px;
-        height: 120px;
+        width: 180px;
+        height: 180px;
     }
 }
 </style>
 </head>
-
 <body>
 
 <!-- NAVIGATION -->
 <nav>
-<a href="index.html">Home</a>
-<a href="resume.html">Resume</a>
-<a href="blog.html">Blog</a>
+  <a href="index.html">Home</a>
+  <a href="resume.html">Resume</a>
+  <a href="blog.html">Blog</a>
 </nav>
 
-<div class="container">
+<!-- HERO SECTION -->
+<div class="hero">
+  <!-- BIO -->
+  <div class="bio">
+    <h1>Hi, I'm Valli</h1>
+    <p>
+      I am a current senior pursuing economics at William and Mary. Through my internships with firms like BlackPearl Global Investments and Evolved Global, I developed hands-on experience in venture capital, conducting due diligence, analyzing financial statements, and contributing to startup growth strategies. This experience taught me the importance of thorough research and analytical rigor in evaluating investments and driving business decisions. On campus, I’m deeply involved in leadership roles as a Residential Assistant, Presidential Aide, and Undersecretary-General for our High School Model UN Conference, where I advocate for inclusivity and community building. I foster a welcoming environment in each role that supports diversity and inspires meaningful connections. My experience in student leadership has honed my communication and organizational skills, enabling me to manage projects effectively and lead teams toward a shared goal. I'm passionate about using my analytical and project management skills in consulting, investment banking, and finance/economics. I’m currently exploring consulting and capital markets opportunities and am particularly interested in internships that will allow me to be in a client-centered environment.
+    </p>
+    <a href="resume.html" class="button">View My Resume</a>
+  </div>
 
-<!-- PROFILE IMAGE -->
-<img src="download.png" class="profile-image" alt="Valli Ramanathan">
-
-<h1>Valli Ramanathan - Blog</h1>
-
-<!-- BLOG POST 1 -->
-<div class="blog-post">
-<h2>LinkedIn Post: Career Insights</h2>
-<p>Check out my recent LinkedIn post about professional growth and insights.</p>
-<a href="https://www.linkedin.com/feed/update/urn:li:activity:7095856385787052032/" target="_blank">View Post on LinkedIn</a>
-</div>
-
-<!-- BLOG POST 2 -->
-<div class="blog-post">
-<h2>LinkedIn Post: Project Highlight</h2>
-<p>Take a look at this project I shared on LinkedIn, highlighting my work and achievements.</p>
-<a href="https://www.linkedin.com/in/valliram2004/overlay/1605044896964/single-media-viewer/?profileId=ACoAAC8QisIBRW1-3uLQwbazmBz5CXk6YFlc_bY" target="_blank">View Post on LinkedIn</a>
-</div>
-
+  <!-- PROFILE IMAGE -->
+  <img src="download.png" alt="Valli Ramanathan" class="profile-image">
 </div>
 
 </body>
